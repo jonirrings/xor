@@ -1,0 +1,16 @@
+[package]
+name = "xor"
+version = "0.1.0"
+authors = ["Jonir Rings <peterpuyi@live.cn>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rayon = "1.3"
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = 'abort'
