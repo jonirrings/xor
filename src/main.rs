@@ -9,6 +9,11 @@ fn main() {
         (Some(i), Some(o)) => {
             xor(i, o);
         }
+        (Some(i), None) => {
+            let mut o = i.clone();
+            o.push_str(".xml");
+            xor(i, o)
+        }
         _ => {
             println!("missing parameter!");
             println!("usage:");
