@@ -3,7 +3,7 @@
 1. 备份配置文件
 1. 解密配置文件，得到账号密码
 # tewa-708e破解流程
-1. 路由器插入u盘，fat32文件系统。
+1. 光猫上插入u盘，fat32文件系统。
 1. 常规用户登陆http://192.168.1.1:8080
 1. 切换到 管理-设备管理
 1. 浏览器进入调试模式，在console处，从top切换到MD_Device_user.html
@@ -26,7 +26,8 @@
         ```
     1. 如果都失败，请参考[相近型号破解的思路](#其他几个相近型号的破解)和[#2](https://github.com/jonirrings/xor/issues/2)
 1. 在u盘内得到ctce8_TEWA-708E.cfg文件
-1. 使用[routerpassview](http://www.nirsoft.net/utils/router_password_recovery.html)或者[附件的xor](https://github.com/jonirrings/xor/releases)解密， 使用方法参考[#4](https://github.com/jonirrings/xor/issues/4)
+    1. 使用[routerpassview](http://www.nirsoft.net/utils/router_password_recovery.html)或者[附件的xor](https://github.com/jonirrings/xor/releases)解密， 使用方法参考[#4](https://github.com/jonirrings/xor/issues/4)
+    1. 直接使用[网页](https://jonirrings.github.io/xor/)解密，用法参考页面说明。
 1. 在解密后文件内找到TeleComAccount，下面的Password内即为超密
 1. 如果需要打开telnet，超级用户登陆后，打开 http://192.168.1.1:8080/enableTelnet.html 即可启用telnet
 

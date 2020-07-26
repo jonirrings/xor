@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TEWA-708e/1000e配置文件转换</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism.min.css"/>
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+    <script type="application/javascript" src="index.js" async></script>
+</head>
+<body>
+<p>此页面仅在Chrome/Firefox/Edge/Safari下测试过，不保证其他浏览器下的兼容性，不保证错误文件的转换效果。</p>
+<p>本页面不会收集数据，不信自己看源码，反正也没几行，哈哈哈！</p>
+<p>用法：选择配置文件，点击转换，然后在代码区里面找TeleComAccount</p>
+<form id="config-form">
+    <label>
+        配置文件
+        <input name="config-file" type="file">
+    </label>
+    <button type="submit">转换</button>
+</form>
+<div>
+    <code id="result" class="language-xml" style="white-space: pre-wrap;"></code>
+</div>
+</body>
+</html>
