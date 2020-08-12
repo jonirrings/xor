@@ -14,8 +14,7 @@ function getCipher(file) {
     reader.onload = function (e) {
         const cipherBuffer = e.target.result;
         const plainText = convert(cipherBuffer);
-        const formatHtml = formatXml(plainText);
-        code.innerHTML = formatHtml;
+        code.innerHTML = formatXml(plainText);
     }
     reader.readAsArrayBuffer(file);
 }
@@ -27,7 +26,7 @@ function formatXml(string) {
 function onSubmit(e) {
     e.preventDefault();
     const file = getFile(e.target);
-    if (file && file.size < 1) {
+    if (!file || file.size < 1) {
         alert('请先选择文件');
         return;
     }

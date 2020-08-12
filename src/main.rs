@@ -33,17 +33,14 @@ fn xor(i: String, o: String) {
         println!("{}", err);
         return;
     }
-    match (input_file, output_file) {
-        (Ok(mut input), Ok(mut output)) => {
-            let mut buf = Vec::new();
-            if input.read_to_end(&mut buf).is_err() {
-                println!("Reading Error!");
-            };
-            buf.par_iter_mut().for_each(|p| *p ^= 0xff);
-            if output.write(&buf).is_err() {
-                println!("Writing Error!");
-            };
-        }
-        _ => {}
+    if let (Ok(mut input), Ok(mut output)) = (input_file, output_file) {
+        let mut buf = Vec::new();
+        if input.read_to_end(&mut buf).is_err() {
+            println!("Reading Error!");
+        };
+        buf.par_iter_mut().for_each(|p| *p ^= 0xff);
+        if output.write(&buf).is_err() {
+            println!("Writing Error!");
+        };
     }
 }
